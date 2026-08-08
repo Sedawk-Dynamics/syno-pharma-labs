@@ -16,7 +16,7 @@ const categories: { id: string; label: string; blurb: string; items: Product[] }
     blurb: "Acid control, motility and H. pylori management for everyday GI practice.",
     items: [
       { name: "Pancide 40 mg Tab", form: "Tablet", icon: Tablets },
-      { name: "Pincode DSR Cap", form: "Capsule", icon: Pill },
+      { name: "Pancide DSR Cap", form: "Capsule", icon: Pill },
       { name: "Pancide L Cap", form: "Capsule", icon: Pill },
       { name: "Pancide IT Cap", form: "Capsule", icon: Pill },
       { name: "Pancide HP Kit", form: "Combi kit", icon: Package },
