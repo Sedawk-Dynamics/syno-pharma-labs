@@ -157,6 +157,41 @@
     scroll-behavior: smooth;
     scroll-padding-top: 5.5rem;
   }
+
+  /* Slim, seamless scrollbar for big screens (desktop) */
+  @media (min-width: 768px) {
+    html, body, * {
+      scrollbar-width: thin;
+      scrollbar-color: color-mix(in oklab, var(--primary) 35%, transparent) transparent;
+    }
+
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: color-mix(in oklab, var(--primary) 32%, transparent);
+      border-radius: 9999px;
+      transition: background-color 0.2s ease;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: color-mix(in oklab, var(--teal) 70%, transparent);
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+      background-color: var(--primary);
+    }
+
+    ::-webkit-scrollbar-corner {
+      background: transparent;
+    }
+  }
 }
 
 @utility text-gradient-brand {
