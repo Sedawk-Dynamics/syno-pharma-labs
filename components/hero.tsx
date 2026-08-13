@@ -45,7 +45,7 @@ export function Hero() {
           <dl className="mt-10 grid max-w-lg grid-cols-3 gap-6 border-t border-border pt-6">
             {[
               ["14+", "Products"],
-              ["3", "Therapy areas"],
+              ["6", "Therapy areas"],
               ["9–6", "Support hours"],
             ].map(([value, label]) => (
               <div key={label}>

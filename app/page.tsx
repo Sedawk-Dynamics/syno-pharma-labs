@@ -11,7 +11,7 @@ const jsonLd = {
   "@type": "Corporation",
   name: "SYNO PHARMA LABORATORIES PRIVATE LIMITED",
   alternateName: "Syno Pharma",
-  email: "info@synopharma.com",
+  email: "info@synopharma.in",
   telephone: "+91-7643085315",
   address: {
     "@type": "PostalAddress",

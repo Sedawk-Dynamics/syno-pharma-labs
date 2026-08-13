@@ -27,9 +27,9 @@ export function Footer() {
               SYNO PHARMA LABORATORIES PRIVATE LIMITED — delivering ethical, evidence-based
               healthcare solutions across gastroenterology, hepatology and nutritional care.
             </p>
-            <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-deep-foreground/60">
+            {/* <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-deep-foreground/60">
               GSTIN: 10ABRCS7172C1ZD
-            </p>
+            </p> */}
           </div>
 
           <div>
@@ -63,8 +63,8 @@ export function Footer() {
               </li>
               <li className="flex gap-2">
                 <Mail className="mt-0.5 size-4 shrink-0" />
-                <a href="mailto:info@synopharma.com" className="hover:text-deep-foreground">
-                  info@synopharma.com
+                <a href="mailto:info@synopharma.in" className="hover:text-deep-foreground">
+                  info@synopharma.in
                 </a>
               </li>
             </ul>

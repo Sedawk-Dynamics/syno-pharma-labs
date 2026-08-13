@@ -17,7 +17,7 @@ const details = [
     value: "+91 76430 85315 | +91 99903 93883",
     href: "tel:+917643085315",
   },
-  { icon: Mail, label: "Email", value: "info@synopharma.com", href: "mailto:info@synopharma.com" },
+  { icon: Mail, label: "Email", value: "info@synopharma.in", href: "mailto:info@synopharma.in" },
   { icon: Clock, label: "Working hours", value: "Monday – Saturday, 9:00 AM to 6:00 PM" },
 ];
 
