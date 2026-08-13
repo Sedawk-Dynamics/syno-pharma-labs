@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Maximize2, Package, Send, ShieldCheck, Sparkles, CheckCircle2 } from "lucide-react";
+import { Send } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
@@ -59,16 +59,6 @@ const categories: {
         category: "gastro",
       },
       {
-        id: "pancide-l",
-        name: "Pancide L Cap",
-        generic: "Enteric Coated Pantoprazole Sodium & Levosulpiride (SR) Capsules",
-        form: "Capsule",
-        pack: "10 × 10 Capsules",
-        image: "/pancide-l.jpeg",
-        description: "Synergistic PPI & prokinetic formulation for refractory GERD, functional dyspepsia & nausea.",
-        category: "gastro",
-      },
-      {
         id: "pancide-it",
         name: "Pancide IT Cap",
         generic: "Pantoprazole 40 mg + Itopride Hydrochloride 150 mg (SR) Capsules",
@@ -76,6 +66,16 @@ const categories: {
         pack: "10 × 10 Capsules",
         image: "/pancide-it.jpeg",
         description: "Advanced prokinetic-PPI combination engineered for non-ulcer dyspepsia & delayed gastric emptying.",
+        category: "gastro",
+      },
+      {
+        id: "pancide-l",
+        name: "Pancide L Cap",
+        generic: "Enteric Coated Pantoprazole Sodium & Levosulpiride (SR) Capsules",
+        form: "Capsule",
+        pack: "10 × 10 Capsules",
+        image: "/pancide-l.jpeg",
+        description: "Synergistic PPI & prokinetic formulation for refractory GERD, functional dyspepsia & nausea.",
         category: "gastro",
       },
       {
@@ -270,67 +270,36 @@ export function Products() {
                       viewport={{ once: true, amount: 0.15 }}
                       transition={{ duration: 0.4, delay: i * 0.05 }}
                     >
-                      <Card className="group h-full overflow-hidden border border-border/70 bg-card shadow-soft transition-all duration-300 hover:border-primary/40 hover:shadow-lift flex flex-col">
-                        {/* Image Preview Container */}
-                        <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-50 dark:bg-slate-900/60 p-4 border-b border-border/40 flex items-center justify-center">
+                      <Card className="group overflow-hidden rounded-2xl border border-border/80 bg-card shadow-soft transition-all duration-300 hover:border-primary/50 hover:shadow-lift flex flex-col justify-between h-full">
+                        {/* Product Image Box */}
+                        <div
+                          className="relative aspect-[4/3] w-full cursor-pointer overflow-hidden bg-slate-50/80 dark:bg-slate-900/50 group-hover:bg-slate-100/60 dark:group-hover:bg-slate-900/80 transition-colors duration-300 p-5 border-b border-border/90 group-hover:border-primary/30 flex items-center justify-center"
+                          onClick={() => setSelectedProduct(p)}
+                        >
                           <img
                             src={p.image}
                             alt={p.name}
-                            className="h-full w-full object-contain drop-shadow-sm transition-transform duration-500 group-hover:scale-105"
+                            className="h-full w-full object-contain drop-shadow-[0_4px_10px_rgba(0,0,0,0.07)] transition-transform duration-500 group-hover:scale-105"
                           />
-
-                          {/* Quick Zoom Overlay Button */}
-                          <button
-                            onClick={() => setSelectedProduct(p)}
-                            type="button"
-                            title="View Full Package"
-                            className="absolute bottom-3 right-3 flex size-8 items-center justify-center rounded-lg bg-background/90 text-foreground shadow-sm opacity-0 backdrop-blur transition-all duration-200 group-hover:opacity-100 hover:bg-primary hover:text-primary-foreground focus:opacity-100"
-                          >
-                            <Maximize2 className="size-4" />
-                          </button>
-
-                          {/* Top Badges */}
-                          <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
-                            <Badge variant="outline" className={`text-xs font-semibold backdrop-blur ${getFormBadgeStyle(p.form)}`}>
-                              {p.form}
-                            </Badge>
-                          </div>
                         </div>
 
-                        {/* Card Content Body */}
-                        <CardContent className="p-5 flex flex-col flex-1 justify-between gap-4">
-                          <div>
-                            <div className="flex items-start justify-between gap-2">
-                              <h3 className="text-lg font-bold leading-snug tracking-tight text-foreground group-hover:text-primary transition-colors">
-                                {p.name}
-                              </h3>
-                            </div>
+                        {/* Name & Details Button */}
+                        <CardContent className="p-4 sm:p-4.5 flex items-center justify-between gap-3 bg-card">
+                          <h3
+                            className="text-base font-bold leading-snug text-foreground group-hover:text-primary transition-colors cursor-pointer tracking-tight"
+                            onClick={() => setSelectedProduct(p)}
+                          >
+                            {p.name}
+                          </h3>
 
-                            <p className="mt-1 text-xs font-medium text-teal line-clamp-1">
-                              {p.generic}
-                            </p>
-
-                            <p className="mt-2.5 text-xs leading-relaxed text-muted-foreground line-clamp-2">
-                              {p.description}
-                            </p>
-                          </div>
-
-                          {/* Footer Specs & Action */}
-                          <div className="pt-3 border-t border-border/50 flex items-center justify-between gap-2">
-                            <div className="flex items-center gap-1.5 text-xs text-muted-foreground font-medium">
-                              <Package className="size-3.5 text-primary/70 shrink-0" />
-                              <span>{p.pack}</span>
-                            </div>
-
-                            <Button
-                              variant="ghost"
-                              size="sm"
-                              onClick={() => setSelectedProduct(p)}
-                              className="h-8 px-3 text-xs font-semibold text-primary hover:bg-primary/10 hover:text-primary rounded-lg"
-                            >
-                              Details &rarr;
-                            </Button>
-                          </div>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() => setSelectedProduct(p)}
+                            className="shrink-0 h-8.5 px-3.5 text-xs font-semibold text-primary border-primary/30 hover:bg-primary hover:text-primary-foreground rounded-xl shadow-2xs transition-all duration-200"
+                          >
+                            Details
+                          </Button>
                         </CardContent>
                       </Card>
                     </motion.div>
