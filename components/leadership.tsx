@@ -11,7 +11,7 @@ const directors = [
     note: "Two decades of building ethical distribution and doctor-first relationships.",
   },
   {
-    name: "Mrs. Kumkum Mishra",
+    name: "Mrs. K K Mishra",
     role: "Managing Director",
     note: "Champions quality systems, compliance and patient-centred product design.",
   },
