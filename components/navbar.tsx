@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, Phone } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
@@ -69,12 +69,6 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2">
-          <a
-            href="tel:+917643085315"
-            className="hidden items-center gap-2 text-sm font-semibold text-primary md:flex"
-          >
-            <Phone className="size-4" /> +91 76430 85315
-          </a>
           <Dialog>
             <DialogTrigger asChild>
               <Button variant="hero" className="hidden sm:inline-flex">

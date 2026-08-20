@@ -1,6 +1,6 @@
 "use client";
 
-import { Building2, Clock, Mail, MapPin, Phone } from "lucide-react";
+import { Building2, Clock, Mail, MapPin } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Reveal, SectionHeading } from "./reveal";
 import { EnquiryForm } from "./enquiry-form";
@@ -10,12 +10,6 @@ const details = [
     icon: MapPin,
     label: "Registered office",
     value: "2321 Gali No-35, Part-1, Sonia Vihar, New Delhi - 110094",
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+91 76430 85315 | +91 99903 93883",
-    href: "tel:+917643085315",
   },
   { icon: Mail, label: "Email", value: "info@synopharma.in", href: "mailto:info@synopharma.in" },
   { icon: Clock, label: "Working hours", value: "Monday – Saturday, 9:00 AM to 6:00 PM" },

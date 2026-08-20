@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUp, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowUp, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoAsset from "@/assets/syno-logo.png";
 
@@ -54,12 +54,6 @@ export function Footer() {
               <li className="flex gap-2">
                 <MapPin className="mt-0.5 size-4 shrink-0" />
                 2321 Gali No-35, Part-1, Sonia Vihar, New Delhi - 110094
-              </li>
-              <li className="flex gap-2">
-                <Phone className="mt-0.5 size-4 shrink-0" />
-                <a href="tel:+917643085315" className="hover:text-deep-foreground">
-                  +91 76430 85315
-                </a>
               </li>
               <li className="flex gap-2">
                 <Mail className="mt-0.5 size-4 shrink-0" />
